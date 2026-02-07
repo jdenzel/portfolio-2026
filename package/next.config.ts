@@ -15,10 +15,8 @@ const nextConfig: NextConfig = {
     images: {
         loader: "custom",
         loaderFile: "./src/image-loader.ts",
-        unoptimized: true,
     },
     trailingSlash: true,
 };
-
 
 export default nextConfig;

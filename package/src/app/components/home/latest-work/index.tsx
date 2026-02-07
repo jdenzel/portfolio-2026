@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "motion/react";
 import WorkDialog from "./work-dialog";
 import { MotionAnimation } from "@/components/ui/motion-animation";
 
+import { workData as staticWorkData } from "@/lib/data";
+
 // Define the type for work items based on the data structure
 interface WorkItem {
   image: string;
@@ -18,7 +20,7 @@ interface WorkItem {
 }
 
 const LatestWork = () => {
-  const [workData, setWorkData] = useState<WorkItem[]>([]);
+  const [workData, setWorkData] = useState<WorkItem[]>(staticWorkData);
   const [currentPage, setCurrentPage] = useState(0);
   const [selectedWork, setSelectedWork] = useState<WorkItem | null>(null);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -26,22 +28,6 @@ const LatestWork = () => {
   // Config
   const itemsPerPage = 4;
   const totalPages = Math.ceil(workData.length / itemsPerPage);
-
-  // Fetch data
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/work-data");
-        if (!res.ok) throw new Error("Failed to fetch work data");
-        const data = await res.json();
-        setWorkData(data.workData || []);
-      } catch (error) {
-        console.error("Error fetching work data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   // Get current items
   const currentItems = workData.slice(

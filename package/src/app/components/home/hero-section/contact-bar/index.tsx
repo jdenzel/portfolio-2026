@@ -6,23 +6,11 @@ import BrandSlider, { BrandList } from "@/app/components/shadcn-space/blocks/her
 
 
 
+import { contactBar, brandList } from "@/lib/data";
+
 const ContactBar = () => {
-  const [contactBarData, setContactBarData] = useState<any>(null);
+  const contactBarData = { ...contactBar, brandList };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/page-data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        setContactBarData({ ...data?.contactBar, brandList: data?.brandList });
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <section className="dark:bg-black bg-white">

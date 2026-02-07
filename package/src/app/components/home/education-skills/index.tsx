@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MotionAnimation } from "@/components/ui/motion-animation";
 
+import { educationData as staticEducationData, allSkills as staticAllSkills } from "@/lib/data";
+
 const EducationSkills = () => {
-  const [educationData, setEductionData] = useState<any>(null);
+  const [educationData, setEductionData] = useState<any>(staticEducationData);
   const [currentPage, setCurrentPage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [skillsPerPage, setSkillsPerPage] = useState(8);
-  const [allSkills, setAllSkills] = useState<any[]>([]);
+  const [allSkills, setAllSkills] = useState<any[]>(staticAllSkills);
 
   const totalPages = Math.ceil(allSkills.length / skillsPerPage);
 
@@ -47,22 +49,6 @@ const EducationSkills = () => {
       return () => clearInterval(interval);
     }
   }, [isPaused, totalPages]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/page-data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        setEductionData(data?.educationData);
-        setAllSkills(data?.allSkills || []);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <section id="education-skills">

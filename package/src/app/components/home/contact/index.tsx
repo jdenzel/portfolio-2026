@@ -7,24 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { contactLinks } from "@/lib/data";
+
 const Contact = () => {
-  const [contactData, setContactData] = useState<any>(null);
+  const [contactData, setContactData] = useState<any>(contactLinks);
   const [result, setResult] = useState<string>("");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/page-data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        setContactData(data?.contactLinks);
-      } catch (error) {
-        console.error("Error fetching services:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

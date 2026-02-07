@@ -3,23 +3,10 @@ import React, { useEffect, useState } from "react";
 import OrbitingCirclesDemo from "../../shadcn-space/blocks/orbiting-space/orbiting-circles";
 import { MotionAnimation } from "@/components/ui/motion-animation";
 
+import { experiences as staticExperiences } from "@/lib/data";
+
 const ExperienceSec = () => {
-  const [experiences, setExperiences] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("/api/page-data");
-        if (!res.ok) throw new Error("Failed to fetch");
-        const data = await res.json();
-        setExperiences(data?.experiences || []);
-      } catch (error) {
-        console.error("Error fetching experiences:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const [experiences, setExperiences] = useState<any[]>(staticExperiences);
 
   return (
     <section id="experience">

@@ -26,7 +26,7 @@ const Header = () => {
               )}
             >
               <span className="relative z-10 text-xl font-medium text-primary group-hover:text-white transition-colors duration-500">
-                Download PDF Resume
+                Download Resume
               </span>
             </a>
             <ThemeToggle className="ml-auto" />

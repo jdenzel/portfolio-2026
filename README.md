@@ -1,70 +1,33 @@
+# Denzel Mabilangan - Portfolio
 
-#### # Resume Web Template for CV's, Bio Data
-🌏[Live Demo](https://resume-getnextjs-template.vercel.app/) |📥[Download](https://getnextjstemplates.com/products/resume-nextjs-template) |👉 [Check Out Next.js Templates](https://getnextjstemplates.com/)
+Welcome to my personal portfolio repository! This project showcases my journey as a Computer Science student at Towson University, featuring my projects, skills, and professional experience.
 
+## 👨‍💻 About Me
 
+Student studying computer science at Towson University with a strong interest in web development. Experienced in building modern web applications using Next.js and Supabase, with a focus on clean architecture and real-world usability.
 
-<a target="_blank" href="https://getnextjstemplates.com/products/resume-nextjs-template">
-  <img src="https://getnextjstemplates.com/images/template-images/resume-nextjs.webp" />
-</a>
+I currently serve as **IT Lead** at my local church where I manage the Network Infrastructure and AV technology, as well as serve as a **Board Member** of Infinite Group where I build applications for our basketball league and solve technical problems.
 
-<p> Showcase your skills, experience, and achievements with our simple and professional Resume Web Template. Built for CVs and bio data, this lightweight and customizable website lets you create a strong online presence in minutes. Whether you're a developer, designer, or professional from any field, this template helps you present your story clearly and impressively.
-</p>
-<p> Powered by Next.js and React with Tailwind CSS, this resume template offers a modern design and smooth performance. Edit your content live with real-time preview and instantly download your resume as a PDF whenever needed. It's easy to use, fully responsive, and perfect for anyone looking to build a personal portfolio website quickly without any technical hassle.
-</p>
+Outside of tech, I enjoy shooting hoops in basketball, playing story-driven games like Cyberpunk 2077 and The Witcher 3, and mixing audio.
 
----
-## 💾 Installation Guide
+## 🛠️ Technologies & Skills
 
-Welcome to the **Resume Web Template for CV's, Bio Data**! This guide will walk you through the installation and setup process, so you can get started with building your custom web page in no time.
+I have experience working with a wide range of technologies, ranging from modern web frameworks to backend infrastructure.
 
-### 📝 Steps to Install
+-   **Frontend:** React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS
+-   **Backend:** Node.js, Python (Django, Flask), Java, C++
+-   **Database:** PostgreSQL, Supabase, Prisma
+-   **DevOps & Tools:** Docker, Git/GitLab, Vercel, Figma
 
-#### 1. **Clone the Repository**
+## 💼 Experience
 
-The easiest way to get started is by cloning the repository or download the zip file. You can do this with the following command:
+-   **IT Lead** | River Of Life ICF (June 2018 - Present)
+-   **Board Member** | Infinite Group Inc. (Aug 2023 - Present)
+-   **Developer Intern** | Mission Media
+-   **Developer Intern** | Towson University CGIS
 
-```bash
-git clone https://github.com/GetNextjsTemplates/resume-nextjs.git
+## 🚀 Featured Projects
 
-```
-
-#### 2. **Install Dependencies**
-
-Install the relative Dependencies of the template. You can do this with the following command:
-
-```bash
-npm install
-```
-
-#### 3. **Start the Development Server**
-
-Once the dependencies are installed, you can start a local development server to preview the template: 
-
-```bash
-npm run dev
-```
-
----
-
-#### 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](https://getnextjstemplates.com/privacy) file for details.
-
-#### Stay Tuned for Nextjs Templates Updates
-
-[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](http://github.com/GetNextjsTemplates/)  [![twitter](https://img.shields.io/badge/twitter-x?style=for-the-badge&logo=x&logoColor=white&color=%230f1419) ](https://x.com/Getnextjstemplt)  [
-![facebook](https://img.shields.io/badge/facebook-logo?style=for-the-badge&logo=facebook&logoColor=white&color=%230866ff)](https://www.facebook.com/getnextjstemplates) [![instagram](https://img.shields.io/badge/instagram-logo?style=for-the-badge&logo=instagram&logoColor=white&color=%23F35369)](https://www.instagram.com/getnextjstemplates/)  [![youtube](https://img.shields.io/badge/youtube-logo?style=for-the-badge&logo=youtube&logoColor=white&color=%23cc0000)](https://www.youtube.com/@NextjsTemplates)  [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nextjstemplates/)
-
-### Follow us for Web Design Updates
-
-[![dribbble](https://img.shields.io/badge/dribbble-logo?style=for-the-badge&logo=dribbble&logoColor=white&color=%23ea64d9)](https://dribbble.com/wrappixel) [![behance](https://img.shields.io/badge/behance-logo?style=for-the-badge&logo=behance&logoColor=white&color=%230057ff)](https://www.behance.net/GetNextjsTemplates/)
-
-
-#### Spread the Word 📢
-
-If you find this template helpful, give it a ⭐️ and share it with your fellow developers. 
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/GetNextjsTemplates/resume-nextjs.git&root-directory=package)
-
-Happy coding! 💻
+-   **Basketball Scoring System:** An offline-first digital scoring app built with Next.js and Supabase to replace paper scorebooks.
+-   **Dashboard Web Application:** A centralized operations platform for league management, featuring real-time statistics and RBAC.
+-   **University Campus Map:** An interactive map for Towson University built with React and Esri SDK.

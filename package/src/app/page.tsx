@@ -1,3 +1,4 @@
+import { MotionAnimation } from "@/components/ui/motion-animation"
 import AboutMe from "./components/home/about-me"
 import Contact from "./components/home/contact"
 import EducationSkills from "./components/home/education-skills"
@@ -13,10 +14,18 @@ const page = () => {
         <HeroSection />
         <ContactBar />
         <AboutMe />
-        <ExperienceSec />
-        <EducationSkills />
-        <LatestWork />
-        <Contact />
+        <MotionAnimation>
+          <ExperienceSec />
+        </MotionAnimation>
+        <MotionAnimation>
+          <EducationSkills />
+        </MotionAnimation>
+        <MotionAnimation>
+          <LatestWork />
+        </MotionAnimation>
+        <MotionAnimation>
+          <Contact />
+        </MotionAnimation>
       </main>
     </>
   )

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+import { MotionAnimation } from "@/components/ui/motion-animation";
 import { cn } from "@/lib/utils";
 
 type Tab = {
@@ -146,22 +147,28 @@ const FadeInStack = ({ className, tabs, hovering }: FadeInStackProps) => {
   return (
     <div className="relative w-full h-[300px]">
       {tabs.map((tab, idx) => (
-        <motion.div
+        <MotionAnimation
           key={tab.value}
-          layoutId={tab.value}
-          style={{
-            scale: 1 - idx * 0.1,
-            top: hovering ? idx * -15 : 0,
-            zIndex: -idx,
-            opacity: idx < 3 ? 1 - idx * 0.1 : 0,
-          }}
-          animate={{
-            y: idx === 0 ? [0, 40, 0] : 0,
-          }}
+          variant="spring"
+          delay={idx * 0.1}
           className={cn("w-full h-full absolute top-0 left-0", className)}
         >
-          {tab.content}
-        </motion.div>
+          <motion.div
+            layoutId={tab.value}
+            style={{
+              scale: 1 - idx * 0.1,
+              top: hovering ? idx * -15 : 0,
+              zIndex: -idx,
+              opacity: idx < 3 ? 1 - idx * 0.1 : 0,
+            }}
+            animate={{
+              y: idx === 0 ? [0, 40, 0] : 0,
+            }}
+            className="w-full h-full"
+          >
+            {tab.content}
+          </motion.div>
+        </MotionAnimation>
       ))}
     </div>
   );

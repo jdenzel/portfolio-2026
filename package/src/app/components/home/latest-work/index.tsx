@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import WorkDialog from "./work-dialog";
+import { MotionAnimation } from "@/components/ui/motion-animation";
 
 // Define the type for work items based on the data structure
 interface WorkItem {
@@ -56,10 +57,12 @@ const LatestWork = () => {
   return (
     <section id="latest-work" className="py-16 md:py-32 border-t border-muted">
       <div className="container">
-        <div className="flex items-center justify-between gap-2 border-b border-primary pb-7 mb-9 xl:mb-16">
-          <h2>Latest Work</h2>
-          <p className="text-xl text-primary">( 04 )</p>
-        </div>
+        <MotionAnimation delay={.1}>
+          <div className="flex items-center justify-between gap-2 border-b border-primary pb-7 mb-9 xl:mb-16">
+            <h2>Latest Work</h2>
+            <p className="text-xl text-primary">( 04 )</p>
+          </div>
+        </MotionAnimation>
 
         <div className="flex flex-col gap-10">
           <div className="min-h-[400px]">
@@ -73,29 +76,31 @@ const LatestWork = () => {
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
               >
                 {currentItems.map((work, index) => (
-                  <div
-                    key={index}
-                    onClick={() => handleWorkClick(work)}
-                    className="group cursor-pointer flex flex-col gap-4"
-                  >
-                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-muted bg-muted/30 transition-colors group-hover:border-primary">
-                      <Image
-                        src={work.image}
-                        alt={work.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                      />
+                  <MotionAnimation delay={.2}>
+                    <div
+                      key={index}
+                      onClick={() => handleWorkClick(work)}
+                      className="group cursor-pointer flex flex-col gap-4"
+                    >
+                      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-muted bg-muted/30 transition-colors group-hover:border-primary">
+                        <Image
+                          src={work.image}
+                          alt={work.title}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        />
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold group-hover:text-primary transition-colors">
+                          {work.title}
+                        </h4>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          Client: {work.client}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="text-lg font-semibold group-hover:text-primary transition-colors">
-                        {work.title}
-                      </h4>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        Client: {work.client}
-                      </p>
-                    </div>
-                  </div>
+                  </MotionAnimation>
                 ))}
               </motion.div>
             </AnimatePresence>

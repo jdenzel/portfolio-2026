@@ -4,7 +4,7 @@ import Image from "next/image";
 import SplashCursor from "../../shadcn-space/animations/splash-cursor";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
+import { MotionAnimation } from "@/components/ui/motion-animation";
 
 const index = () => {
   return (
@@ -27,72 +27,56 @@ const index = () => {
           <div className="flex flex-col gap-4 md:gap-7 max-w-lg md:2xl">
             <div>
               <div className="flex items-center gap-8">
-                <motion.h4
-                  initial={{ opacity: 0, y: 32 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, ease: "easeInOut" }}
-                  className="lg:text-4xl md:text-3xl text-2xl font-medium leading-14 md:leading-20 lg:leading-24"
-                >
-                  Hi Im Denzel
-                </motion.h4>
-                <motion.div
-                  initial={{ opacity: 0, y: 32 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-                  className="flex items-center flex-col md:flex-row justify-center gap-8"
-                >
-                  <div className="wave">
-                    <Image
-                      src={"/images/home/banner/wave-icon.svg"}
-                      alt="wave-icon"
-                      width={62}
-                      height={62}
-                      className=""
-                    />
+                <MotionAnimation delay={0}>
+                  <h4 className="lg:text-4xl md:text-3xl text-2xl font-medium leading-14 md:leading-20 lg:leading-24">
+                    Hi Im Denzel
+                  </h4>
+                </MotionAnimation>
+                <MotionAnimation delay={0.2} fullWidth={false}>
+                  <div className="flex items-center flex-col md:flex-row justify-center gap-8">
+                    <div className="wave">
+                      <Image
+                        src={"/images/home/banner/wave-icon.svg"}
+                        alt="wave-icon"
+                        width={62}
+                        height={62}
+                        className=""
+                      />
+                    </div>
                   </div>
-                </motion.div>
+                </MotionAnimation>
               </div>
-              <motion.h1
-                initial={{ opacity: 0, y: 32 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                className="lg:text-8xl md:text-7xl text-5xl font-medium leading-14 md:leading-20 lg:leading-24"
-              >
-                Software Developer
-              </motion.h1>
+              <MotionAnimation delay={0}>
+                <h1 className="lg:text-8xl md:text-7xl text-5xl font-medium leading-14 md:leading-20 lg:leading-24">
+                  Software Developer
+                </h1>
+              </MotionAnimation>
             </div>
-            <motion.p
-              initial={{ opacity: 0, y: 32 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
-              className="text-xl font-normal  max-w-2xl text-muted-foreground"
-            >
-              Computer Science Student at Towson University specializing in Full-Stack Development and DevOps
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 32 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.1, ease: "easeInOut" }}
-              className="text-base font-normal max-w-2xl text-muted-foreground"
-            >
-              <Button
-                onClick={() => {
-                  const element = document.getElementById("about-me");
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-                className="bg-primary relative text-sm font-medium rounded-full h-12 p-1 ps-6 pe-14 group transition-all duration-500 hover:ps-14 hover:pe-6 w-fit overflow-hidden cursor-pointer"
-              >
-                <span className="relative z-10 transition-all duration-500">
-                  About Me
-                </span>
-                <div className="absolute right-1 w-10 h-10 bg-background text-foreground rounded-full flex items-center justify-center transition-all duration-500 group-hover:right-[calc(100%-44px)] group-hover:rotate-90">
-                  <ArrowRight size={16} />
-                </div>
-              </Button>
-            </motion.div>
-
+            <MotionAnimation delay={0.1}>
+              <p className="text-xl font-normal  max-w-2xl text-muted-foreground">
+                Computer Science Student at Towson University specializing in Full-Stack Development and DevOps
+              </p>
+            </MotionAnimation>
+            <MotionAnimation delay={0.1}>
+              <div className="text-base font-normal max-w-2xl text-muted-foreground">
+                <Button
+                  onClick={() => {
+                    const element = document.getElementById("about-me");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="bg-primary relative text-sm font-medium rounded-full h-12 p-1 ps-6 pe-14 group transition-all duration-500 hover:ps-14 hover:pe-6 w-fit overflow-hidden cursor-pointer"
+                >
+                  <span className="relative z-10 transition-all duration-500">
+                    About Me
+                  </span>
+                  <div className="absolute right-1 w-10 h-10 bg-background text-foreground rounded-full flex items-center justify-center transition-all duration-500 group-hover:right-[calc(100%-44px)] group-hover:rotate-90">
+                    <ArrowRight size={16} />
+                  </div>
+                </Button>
+              </div>
+            </MotionAnimation>
           </div>
           <Image
             src={"/images/home/banner/profile-pic.svg"}
@@ -103,11 +87,10 @@ const index = () => {
           />
         </div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 32 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
-        className="absolute right-0 top-0 hidden h-auto w-1/2 md:block 2xl:h-171.5 2xl:w-187.5">
+      <MotionAnimation
+        delay={0.2}
+        className="absolute right-0 top-0 hidden h-auto w-1/2 md:block 2xl:h-171.5 2xl:w-187.5"
+      >
         <Image
           src={"/images/home/banner/profile-pic.svg"}
           alt="profile-pic"
@@ -115,7 +98,7 @@ const index = () => {
           height={650}
           className="block"
         />
-      </motion.div>
+      </MotionAnimation>
     </section>
   );
 };

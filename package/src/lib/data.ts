@@ -85,6 +85,7 @@ export const experiences = [
     },
     {
         title: "Developer Intern",
+        year: "Oct 2025 - Present",
         company: "Towson University CGIS",
         description:
             "Release of Letraset sheets containing Lorem Ipsum passages and more recently with desktop publishing software",

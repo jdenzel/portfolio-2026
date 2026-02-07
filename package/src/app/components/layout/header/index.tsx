@@ -4,6 +4,8 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import Logo from "../logo";
 import { cn } from "@/lib/utils";
 
+import { ThemeToggle } from "@/components/theme-toggle";
+
 const Header = () => {
 
   return (
@@ -23,10 +25,11 @@ const Header = () => {
                 "button relative overflow-hidden cursor-pointer w-fit h-full py-2 sm:py-3 md:py-5 px-4 sm:px-5 md:px-7 border border-primary rounded-full group"
               )}
             >
-              <span className="relative z-10 text-xl font-medium text-primary group-hover:text-white transition-colors duration-300">
+              <span className="relative z-10 text-xl font-medium text-primary group-hover:text-white transition-colors duration-500">
                 Download PDF Resume
               </span>
             </a>
+            <ThemeToggle className="ml-auto" />
           </div>
         </nav>
       </div>

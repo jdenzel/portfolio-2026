@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 import { motion, Variants } from "motion/react";
 
 interface MotionAnimationProps {
@@ -12,7 +14,7 @@ interface MotionAnimationProps {
     variant?: "default" | "spring";
 }
 
-export const MotionAnimation = ({
+export const MotionAnimation = React.memo(({
     children,
     className = "",
     delay = 0,
@@ -72,4 +74,6 @@ export const MotionAnimation = ({
             {children}
         </motion.div>
     );
-};
+});
+
+MotionAnimation.displayName = "MotionAnimation";

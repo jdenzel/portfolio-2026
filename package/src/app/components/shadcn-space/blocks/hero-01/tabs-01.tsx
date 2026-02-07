@@ -117,7 +117,7 @@ const Tabs = ({
               )}
               <span
                 className={cn(
-                  "relative block text-sm transition-colors duration-200",
+                  "relative block text-sm transition-colors duration-500",
                   isActive ? "text-white" : "text-foreground hover:text-primary",
                 )}
               >

@@ -62,9 +62,8 @@ const LatestWork = () => {
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
               >
                 {currentItems.map((work, index) => (
-                  <MotionAnimation delay={.2}>
+                  <MotionAnimation key={index} delay={.2}>
                     <div
-                      key={index}
                       onClick={() => handleWorkClick(work)}
                       className="group cursor-pointer flex flex-col gap-4"
                     >
@@ -99,7 +98,7 @@ const LatestWork = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentPage(index)}
-                  className={`h-6 rounded-full transition-all duration-300 ${index === currentPage
+                  className={`h-6 rounded-full transition-all duration-500 ${index === currentPage
                     ? "w-12 bg-primary"
                     : "w-6 bg-muted-foreground/30 hover:bg-primary/50"
                     }`}

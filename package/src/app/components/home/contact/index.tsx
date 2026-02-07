@@ -150,7 +150,7 @@ const Contact = () => {
                   type="submit"
                   className="button relative overflow-hidden cursor-pointer w-fit h-full py-2 sm:py-3 md:py-5 px-4 sm:px-5 md:px-7 border border-primary rounded-full group"
                 >
-                  <span className="relative z-10 text-xl font-medium text-primary group-hover:text-white transition-colors duration-300">
+                  <span className="relative z-10 text-xl font-medium text-primary group-hover:text-white transition-colors duration-500">
                     Send Now
                   </span>
                 </Button>

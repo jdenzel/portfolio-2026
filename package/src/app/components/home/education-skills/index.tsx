@@ -108,7 +108,7 @@ const EducationSkills = () => {
                         {currentSkills.map((skill, index) => (
                           <div
                             key={index}
-                            className="flex flex-col items-center justify-center gap-3 p-6 rounded-lg bg-background border border-muted hover:border-primary transition-all duration-300 group"
+                            className="flex flex-col items-center justify-center gap-3 p-6 rounded-lg bg-background border border-muted hover:border-primary transition-all duration-500 group"
                           >
                             <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center p-2 rounded-lg dark:bg-white/10">
                               <Image
@@ -116,7 +116,7 @@ const EducationSkills = () => {
                                 alt={skill.name}
                                 width={64}
                                 height={64}
-                                className="object-contain w-full h-full group-hover:scale-110 transition-transform duration-300"
+                                className="object-contain w-full h-full group-hover:scale-110 transition-transform duration-500"
                               />
                             </div>
                             <p className="text-xs text-center font-medium uppercase tracking-wide">
@@ -133,7 +133,7 @@ const EducationSkills = () => {
                         <button
                           key={index}
                           onClick={() => setCurrentPage(index)}
-                          className={`w-0.5 rounded-full transition-all duration-300 before:!content-none px-3 py-2 ${index === currentPage
+                          className={`w-0.5 rounded-full transition-all duration-500 before:!content-none px-3 py-2 ${index === currentPage
                             ? "h-12 bg-primary"
                             : "h-6 bg-muted-foreground/30 hover:bg-primary/50"
                             }`}

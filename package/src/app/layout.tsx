@@ -3,8 +3,7 @@ import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/header";
 import Footer from "./components/layout/footer";
-import { ThemeProvider } from "next-themes"
-
+import { Providers } from "@/components/providers";
 import SmoothScroll from "@/components/smooth-scroll";
 
 const bricolageGrotesque = Bricolage_Grotesque({
@@ -26,16 +25,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={bricolageGrotesque.className}>
         <SmoothScroll>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+          <Providers>
             <Header />
             {children}
             <Footer />
-          </ThemeProvider>
+          </Providers>
         </SmoothScroll>
       </body>
     </html>

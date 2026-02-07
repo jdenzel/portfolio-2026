@@ -8,7 +8,9 @@ import { MotionAnimation } from "@/components/ui/motion-animation";
 
 const index = () => {
   return (
-    <section id="home" className="relative hero-section xs:h-[85vh] sm:h-auto xl:h-[92vh] overflow-hidden pt-35 md:pt-40 pb-12 lg:pb-30 xl:pt-52 w-full md:pb-10 before:absolute before:w-full before:h-full before:bg-linear-to-r before:from-orange-100 before:via-white before:to-orange-100 before:rounded-full before:top-24 before:blur-3xl before:-z-10 dark:before:from-slate-800 dark:before:via-black dark:before:to-stone-700 dark:before:rounded-full dark:before:blur-3xl dark:before:-z-10">
+    <section id="home" className="relative hero-section xs:h-[85vh] sm:h-auto xl:h-[92vh] overflow-hidden pt-35 md:pt-40 pb-12 lg:pb-30 xl:pt-52 w-full md:pb-10">
+      <div className="absolute top-24 -z-10 w-full h-full rounded-full blur-3xl bg-linear-to-r from-orange-100 via-white to-orange-100 transition-opacity duration-500 dark:opacity-0" />
+      <div className="absolute top-24 -z-10 w-full h-full rounded-full blur-3xl bg-linear-to-r from-slate-800 via-black to-stone-700 opacity-0 dark:opacity-100 transition-opacity duration-500" />
       <div className="container ">
         <div className="absolute inset-0 -z-1 pointer-events-none">
           <SplashCursor
@@ -72,7 +74,7 @@ const index = () => {
                     About Me
                   </span>
                   <div className="absolute right-1 w-10 h-10 bg-background text-foreground rounded-full flex items-center justify-center transition-all duration-500 group-hover:right-[calc(100%-44px)] group-hover:rotate-90">
-                    <ArrowRight size={16} />
+                    <ArrowRight size={16} className="transition-all duration-500" />
                   </div>
                 </Button>
               </div>

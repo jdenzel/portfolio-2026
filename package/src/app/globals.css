@@ -277,11 +277,15 @@ body {
 }
 
 @layer base {
-  * {
+
+  *,
+  *::before,
+  *::after {
     @apply border-border outline-ring/50;
   }
 
   body {
     @apply bg-background text-foreground;
+    transition: background-color .5s ease, color .5s ease;
   }
 }

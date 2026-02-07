@@ -14,6 +14,24 @@ const bricolageGrotesque = Bricolage_Grotesque({
 export const metadata: Metadata = {
   title: "Denzel Mabilangan Resume",
   description: "Computer Science Student at Towson University excited to solve real world problems and bring ideas to life",
+  openGraph: {
+    title: "Denzel Mabilangan - Software Developer",
+    description: "Computer Science Student at Towson University excited to solve real world problems and bring ideas to life",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1920,
+        height: 1078,
+        alt: "Denzel Mabilangan - Software Developer Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Denzel Mabilangan - Software Developer",
+    description: "Computer Science Student at Towson University excited to solve real world problems and bring ideas to life",
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({

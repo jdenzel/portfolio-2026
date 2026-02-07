@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 
-const isProd = process.env.NODE_ENV === 'production' || process.env.GITHUB_ACTIONS;
+
+const isProd = process.env.GH_PAGES_BUILD;
 
 const nextConfig: NextConfig = {
     output: "export",

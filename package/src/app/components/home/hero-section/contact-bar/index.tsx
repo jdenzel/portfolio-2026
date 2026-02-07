@@ -15,7 +15,7 @@ const ContactBar = () => {
         const res = await fetch("/api/page-data");
         if (!res.ok) throw new Error("Failed to fetch");
         const data = await res.json();
-        setContactBarData(data?.contactBar);
+        setContactBarData({ ...data?.contactBar, brandList: data?.brandList });
       } catch (error) {
         console.error("Error fetching services:", error);
       }
@@ -53,7 +53,9 @@ const ContactBar = () => {
                 ),
               )}
             </div>
-            <BrandSlider brandList={contactBarData?.brandList || []} />
+            {contactBarData?.brandList && (
+              <BrandSlider brandList={contactBarData?.brandList} />
+            )}
 
             {/* Social Items */}
             <div className="flex items-center justify-center md:justify-end gap-4 md:gap-2.5">

@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production' || process.env.GITHUB_ACTIONS;
 
 const nextConfig: NextConfig = {
     output: "export",
@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
     images: {
         unoptimized: true,
     },
+    trailingSlash: true,
 };
 
 

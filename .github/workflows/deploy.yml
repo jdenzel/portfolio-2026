@@ -52,6 +52,7 @@ jobs:
       - name: Build with Next.js
         env:
           GH_PAGES_BUILD: true
+          NEXT_PUBLIC_BASE_PATH: /portfolio-2026
         run: cd package && ${{ steps.detect-package-manager.outputs.runner }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

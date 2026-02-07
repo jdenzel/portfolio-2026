@@ -54,7 +54,7 @@ const index = () => {
             </div>
             <MotionAnimation delay={0.1}>
               <p className="text-xl font-normal  max-w-2xl text-muted-foreground">
-                Computer Science Student at Towson University specializing in Full-Stack Development and DevOps
+                Computer Science Student at Towson University excited to solve real world problems and bring ideas to life
               </p>
             </MotionAnimation>
             <MotionAnimation delay={0.1}>

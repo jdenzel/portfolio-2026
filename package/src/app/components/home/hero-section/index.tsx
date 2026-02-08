@@ -78,13 +78,15 @@ const index = () => {
               </div>
             </MotionAnimation>
           </div>
-          <Image
-            src={"/images/home/banner/profile-pic.svg"}
-            alt="profile-pic"
-            width={685}
-            height={650}
-            className="block md:hidden xs:w-[450px] mr-auto ml-auto"
-          />
+          <MotionAnimation delay={0.2}>
+            <Image
+              src={"/images/home/banner/profile-pic.svg"}
+              alt="profile-pic"
+              width={685}
+              height={650}
+              className="block md:hidden xs:w-[450px] mr-auto ml-auto"
+            />
+          </MotionAnimation>
         </div>
       </div>
       <MotionAnimation

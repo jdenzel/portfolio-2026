@@ -27,7 +27,7 @@ const ExperienceSec = () => {
               {experiences.map((exp, index) => (
                 <div
                   key={index}
-                  className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 items-start relative"
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 items-start relative"
                 >
                   <div className="relative">
                     {index < experiences.length && (
@@ -36,7 +36,7 @@ const ExperienceSec = () => {
                       ></div>
                     )}
 
-                    <div className="no-print absolute left-0 top-0 transform -translate-x-1/2">
+                    <div className="no-print absolute left-0 top-2 transform -translate-x-1/2">
                       <div
                         className={`no-print w-3.5 h-3.5 rounded-full border-1 bg-white flex items-center justify-center ${index === 3 ? "border-primary" : "border-black"
                           }`}
@@ -47,16 +47,16 @@ const ExperienceSec = () => {
                       </div>
                     </div>
 
-                    <div className="pl-4 lg:pl-7">
+                    <div className="pl-4 lg:pl-7 ">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className="text-3xl font-normal">
+                        <span className="text-3xl sm:text-2xl font-normal ">
                           {exp.company}
                         </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="">
+                  <div className="xs:pl-10">
                     <h3 className="font-bold mb-2">{exp.title}</h3>
                     <h4 className="text-lg font-normal text-primary">{exp.year}</h4>
                   </div>

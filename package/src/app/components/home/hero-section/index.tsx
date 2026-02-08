@@ -28,9 +28,9 @@ const index = () => {
         <div className="lg:flex grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-4 items-center">
           <div className="flex flex-col gap-4 md:gap-7 max-w-lg md:2xl">
             <div>
-              <div className="flex items-center gap-2">
-                <MotionAnimation delay={0} className="w-fit">
-                  <h4 className="lg:text-4xl md:text-3xl text-2xl font-medium leading-14 md:leading-20 lg:leading-24">
+              <div className="flex items-center gap-8">
+                <MotionAnimation delay={0} fullWidth={false}>
+                  <h4 className="lg:text-4xl md:text-3xl tex  t-2xl font-medium leading-14 md:leading-20 lg:leading-24">
                     Hi Im Denzel
                   </h4>
                 </MotionAnimation>

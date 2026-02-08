@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Gallery from "../../shadcn-space/blocks/gallery-01/gallery";
+import { Gamepad2, Laugh, Music } from "lucide-react";
 import { MotionAnimation } from "@/components/ui/motion-animation";
 
 const AboutMe = () => {
@@ -57,12 +58,19 @@ const AboutMe = () => {
                   </p>
                 </MotionAnimation>
 
-                <div className="grid grid-cols-3 py-10 xl:py-16 gap-5 border-b border-primary"></div>
+                <MotionAnimation delay={.4}>
+                  <div className="flex justify-around pt-10 xl:pt-16 pb-2  border-b border-primary">
+                    <Laugh className="bg-red-500/10 text-red-500 p-2 rounded-full size-15" />
+                    <Gamepad2 className="bg-green-500/10 text-green-500 p-2 rounded-full size-15" />
+                    <Music className="bg-blue-500/10 text-blue-500 p-2 rounded-full size-15" />
+                  </div>
+                </MotionAnimation>
+
               </div>
             </div>
           </div>
         </div>
-        <MotionAnimation delay={.4}>
+        <MotionAnimation delay={.5}>
           <Gallery />
         </MotionAnimation>
       </div>

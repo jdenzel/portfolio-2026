@@ -1,5 +1,5 @@
 import React from "react";
-import { LucideIcon, Code } from "lucide-react";
+import { LucideIcon, Code, } from "lucide-react";
 import { cn } from "@/lib/utils";
 import "./orbiting-circles.css"
 

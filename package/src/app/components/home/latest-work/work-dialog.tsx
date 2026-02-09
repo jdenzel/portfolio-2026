@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -33,14 +34,22 @@ interface WorkDialogProps {
 }
 
 const WorkDialog = ({ work, open, onOpenChange }: WorkDialogProps) => {
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (open && scrollContainerRef.current) {
+            scrollContainerRef.current.scrollTop = 0;
+        }
+    }, [open, work]);
+
     if (!work) return null;
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent className="min-w-[90vw] w-full h-[90vh] max-h-[90vh] overflow-hidden p-0">
-                <div className="flex flex-col sm:grid sm:grid-cols-3 gap-0 h-full">
+                <div className="flex flex-col xl:grid lg:grid-cols-3 gap-0 h-full">
                     {/* Left side - Image Carousel */}
-                    <div className="relative bg-muted/30 flex items-center justify-center h-[60%] sm:h-full sm:col-span-2">
+                    <div className="relative bg-muted/30 flex items-center justify-center h-[60%] xl:h-auto xl:col-span-2 max-[400px]:p-4">
                         <Carousel className="w-full h-full [&>div]:h-full">
                             <CarouselContent className="h-full ml-0">
                                 {work.gallery.map((imageUrl, index) => (
@@ -50,7 +59,7 @@ const WorkDialog = ({ work, open, onOpenChange }: WorkDialogProps) => {
                                                 src={imageUrl}
                                                 alt={`${work.title} - Image ${index + 1}`}
                                                 fill
-                                                className="object-contain"
+                                                className="object-contain max-[400px]:object-[center_45%]"
                                                 sizes="100vw"
                                                 quality={100}
                                                 priority={index === 0}
@@ -66,7 +75,7 @@ const WorkDialog = ({ work, open, onOpenChange }: WorkDialogProps) => {
 
 
                     {/* Right side - Project Details */}
-                    <div className="flex flex-col p-6 sm:p-8 lg:p-12 overflow-y-auto h-[40%] sm:h-full sm:col-span-1 border-t sm:border-t-0">
+                    <div ref={scrollContainerRef} className="flex flex-col p-6 xl:p-8 overflow-y-auto h-[40%] xl:h-full xl:col-span-1 border-t xl:border-t-0 scroll-smooth">
                         <DialogHeader className="mb-6">
                             <DialogTitle className="text-3xl lg:text-4xl font-bold mb-2">
                                 {work.title}
@@ -74,6 +83,7 @@ const WorkDialog = ({ work, open, onOpenChange }: WorkDialogProps) => {
                             <p className="text-muted-foreground text-lg">
                                 Client: {work.client}
                             </p>
+                            <div className="py-2 border-b border-primary"></div>
                         </DialogHeader>
 
                         <div className="flex-1 space-y-6">
@@ -99,7 +109,8 @@ const WorkDialog = ({ work, open, onOpenChange }: WorkDialogProps) => {
                                     <Link
                                         href={work.link}
                                         target="_blank"
-                                        className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                                        className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors focus:outline-none"
+                                        tabIndex={-1}
                                     >
                                         <span>View Project</span>
                                         <svg

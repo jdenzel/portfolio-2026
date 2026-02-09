@@ -276,7 +276,7 @@ export const workData = [
         client: "Maryland Science Center",
         slug: "md-sci-redesign",
         description: "Worked with Mission Media on the Maryland Science Center's rebrand. I contributed by optimizing image and video assets to improve load times and overall site performance. The website was built using WordPress, with custom implementation in PHP, JavaScript, HTML, and CSS.",
-        link: "",
+        link: "https://www.mdsci.org/",
         technologies: [
             "WordPress",
             "JavaScript",

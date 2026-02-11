@@ -91,6 +91,7 @@ const index = () => {
       </div>
       <MotionAnimation
         delay={0.2}
+        fullWidth={false}
         className="absolute right-0 top-0 hidden h-auto w-1/2 md:block 2xl:h-171.5 2xl:w-187.5"
       >
         <Image
@@ -98,7 +99,7 @@ const index = () => {
           alt="profile-pic"
           width={685}
           height={650}
-          className="block"
+          className="block ml-auto"
         />
       </MotionAnimation>
     </section>

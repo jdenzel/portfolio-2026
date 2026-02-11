@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import OrbitingCirclesDemo from "../../shadcn-space/blocks/orbiting-space/orbiting-circles";
 import { MotionAnimation } from "@/components/ui/motion-animation";
 

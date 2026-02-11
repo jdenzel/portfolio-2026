@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import BrandSlider, { BrandList } from "@/app/components/shadcn-space/blocks/hero-01/brand-slider";
 
 

@@ -79,7 +79,7 @@ export const experiences = [
     },
     {
         title: "Developer Intern",
-        year: "June 2025",
+        year: "June 2025 - August 2025",
         company: "Mission Media",
         description: ""
     },

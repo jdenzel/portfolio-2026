@@ -50,17 +50,24 @@ const AboutMe = () => {
                     engineering software solutions. I'm proficient in developing
                     with modern tech tools including Next.js, React.js, Node.js,
                     Typescript, and Tailwind CSS, coupled with robust database
-                    management using Supabase. I'm currently the Technical Lead
-                    at Infinite Group where I build the digital infrastructure
+                    management using Supabase.  
+                  </p>
+                  
+                  <p>
+                    I'm currently the Technical Lead at Infinite Group where I build the digital infrastructure
                     needed to empower our local community through sports. I also
                     lead the tech team at River of Life International Christian
                     Fellowship, using my technical expertise to foster
-                    connection and bring people closer to Christ. My personal
-                    goal is to use all the skills that I learn and the
-                    experience I gain, to help and serve my community. 1st Peter
-                    4:10 As each has received a gift, use it to serve one
-                    another, as good stewards of God's varied grace
+                    connection and bring people closer to Christ.
                   </p>
+
+                  <p>
+                    My personal goal is to use all the skills that I learn and the
+                    experience I gain, to help and serve my community. 
+                  </p>
+                  <div></div>
+                  <p><em>1st Peter 4:10 As each has received a gift, use it to serve one
+                    another, as good stewards of God's varied grace</em></p>
                 </MotionAnimation>
 
                 <MotionAnimation delay={0.4}>
